@@ -1,14 +1,15 @@
 import { StyleSheet } from 'react-native';
 
-import EditScreenInfo from '@/components/EditScreenInfo';
 import { Text, View } from '@/components/Themed';
+import { Image } from 'expo-image';
 
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab Two</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/two.tsx" />
+      <Image source={require('@/assets/images/icon.png')} style={styles.image} />
+      <Text>Company Name: Foo Bar</Text>
+      <Text>Address: Jl. Foo bar baz</Text>
+      <Text>Phone Number: 021123123123</Text>
     </View>
   );
 }
@@ -23,9 +24,9 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  image: {
+    height: 200,
+    width: 200,
+    alignSelf: 'center'
   },
 });
