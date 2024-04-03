@@ -19,16 +19,14 @@ export default function TabOneScreen() {
   }, [])
   
   return (
-    <View>
-      <FlatList
-        data={products}
-        renderItem={({item}) => <ProductListItem title={item.title} image={item.image} price={item.price} id={item.id} />}
-        horizontal={false}
-        contentContainerStyle={styles.container}
-        columnWrapperStyle={styles.wrapper}
-        numColumns={Platform.OS === 'web' ? 4 : 2}
-      />
-    </View>
+    <FlatList
+      data={products}
+      renderItem={({item}) => <ProductListItem title={item.title} image={item.image} price={item.price} id={item.id} />}
+      horizontal={false}
+      contentContainerStyle={styles.container}
+      columnWrapperStyle={styles.wrapper}
+      numColumns={Platform.OS === 'web' ? 4 : 2}
+    />
   );
 }
 
